@@ -53,30 +53,13 @@ public class Journal {
                 foreach(var record in records)
                 {
                     _entries.Add(new Entry(record.prompt.Replace("#@#",","), record.entry.Replace("#@#",","), record.date));
-                    //Console.Write($"{item.date}\t{item.prompt}\t{item.entry}");
+
                 }
                 
-                //Console.WriteLine();
 
             }
         }
-        /*
-        string text;
-        using (StreamReader reader = new StreamReader(file))
 
-        {
-            text = reader.ReadToEnd();
-
-            var jsonData = JsonSerializer.Deserialize<dynamic>(text);
-
-            foreach(var property in jsonData.Properties())
-            {
-                _entries.Add(new Entry(property.prompt, property.entry, property.date));
-            }
-
-        }
-
-        */
     }
 
 
