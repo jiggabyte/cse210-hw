@@ -1,6 +1,15 @@
 using System;
 using System.Collections.Generic;
 
+/*
+  Submission Comments:
+
+  I had to save the data as a csv file and installed a nugget library [CsvHelper] of which I used to read the csv file
+  and also, I handled multiple commas in the data in such a way that the csv data can be read and stored seamlessly,
+  and also handled errors of file not found.
+  
+*/
+
 class Program
 {
     static void Main(string[] args)
