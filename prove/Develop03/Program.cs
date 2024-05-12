@@ -59,7 +59,7 @@ class Program
         string scriptureText;
         Scripture scripture;
 
-        // Console.Clear();
+        Console.Clear();
         Console.WriteLine("Press Enter to continue or Type 'quit' to exit!");
 
         // Create an instance of Random class
