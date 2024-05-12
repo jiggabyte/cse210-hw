@@ -5,7 +5,7 @@ public class Scripture
 {
     private Reference _reference;
     private List<Word> _words;
-    List<Word> wordsList = new List<Word>();
+    private List<Word> wordsList = new List<Word>();
 
     public Scripture(Reference reference, string text)
     {

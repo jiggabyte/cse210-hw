@@ -1,5 +1,12 @@
 using System;
 
+/*
+Submission Comment:
+
+I added a 2D string array containing a list of scripture references
+which my code randomly selects one to use for the scripture memorizer.
+
+*/
 class Program
 {
     static void Main(string[] args)
@@ -27,13 +34,12 @@ class Program
         int VERSE_TEXT = 4;        
 
         List<List<string>> scriptureLoader = new List<List<string>>();
-        List<string> scriptText = new List<string>();
-
+        
         for(int i = 0; i < scriptureData.GetLength(0); i++)
         {
+            List<string> scriptText = new List<string>();
             for(int j = 0; j < scriptureData.GetLength(1); j++)
             {
-                Console.WriteLine(scriptureData[i,j]);
 
                 scriptText.Add(scriptureData[i,j]);
                 
@@ -41,10 +47,7 @@ class Program
 
             scriptureLoader.Add(scriptText);
 
-        }
-
-        Console.WriteLine(scriptureLoader.Count);
-        
+        }        
 
         ConsoleKeyInfo keyInfo;
         string programExit;
