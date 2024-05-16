@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+
+public class ListingActivity : Activity {
+
+
+    private int _count;
+
+    private List<string> _prompts;
+
+    public ListingActivity()
+    {
+
+    }
+
+    public void run()
+    {
+
+    }
+
+    public void GetRandomPrompt()
+    {
+
+    }
+
+    public List<string> GetListFromUser()
+    {
+
+
+        return null;
+    }
+
+    
+}
