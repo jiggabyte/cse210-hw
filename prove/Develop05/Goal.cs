@@ -1,39 +1,45 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
+// Base Goal class
 public class Goal
 {
-    private string _shortName;
-    private string _description;
-    private string _points;
+    protected string _shortName;
+    protected string _description;
+    protected int _points;
 
-    public Goal(string name, string description, string points)
+    public int Points => _points; // Read-only property for points
+
+    public Goal(string name, string description, int points)
     {
         _shortName = name;
         _description = description;
         _points = points;
     }
 
-    public void RecordEvent()
+    public virtual void RecordEvent()
     {
-        // Logic to record an event related to the goal
+        // Base logic to record an event related to the goal
     }
 
-    public bool IsComplete()
+    public virtual bool IsComplete()
     {
-        // Logic to check if the goal is complete
+        // Base logic to check if the goal is complete
         return false;
     }
 
-    public string GetDetailsString()
+    public virtual string GetDetailsString()
     {
-        // Logic to get details string of the goal
-        return "";
+        // Base logic to get details string of the goal
+        return $"{_shortName}: {_description}, Points: {_points}";
     }
 
-    public string GetStringRepresentation()
+    public virtual string GetStringRepresentation()
     {
-        // Logic to get string representation of the goal
-        return "";
+        // Base logic to get string representation of the goal
+        return $"{_shortName},{_description},{_points}";
     }
+
+    
 }

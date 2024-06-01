@@ -1,29 +1,32 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+
 
 public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
-    public SimpleGoal(string name, string description, string points) : base(name, description, points)
+    public SimpleGoal(string name, string description, int points) : base(name, description, points)
     {
         _isComplete = false;
     }
 
-    public new void RecordEvent()
+    public override void RecordEvent()
     {
         // Logic to record an event related to the simple goal
+        _isComplete = true;
     }
 
-    public new bool IsComplete()
+    public override bool IsComplete()
     {
         // Logic to check if the simple goal is complete
         return _isComplete;
     }
 
-    public new string GetStringRepresentation()
+    public override string GetStringRepresentation()
     {
         // Logic to get string representation of the simple goal
-        return base.GetStringRepresentation();
+        return $"SimpleGoal,{base.GetStringRepresentation()},{_isComplete}";
     }
 }

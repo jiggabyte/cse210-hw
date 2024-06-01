@@ -1,0 +1,4 @@
+62
+EternalGoal,pomer,details,30
+SimpleGoal,attend sacramental meetings.,Always attend sacramental meetings at my local ward and stake.,30,False
+ChecklistGoal,roadie,street,20,3,3,2

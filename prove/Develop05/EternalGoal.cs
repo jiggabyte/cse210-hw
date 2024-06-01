@@ -1,27 +1,30 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
+
 
 public class EternalGoal : Goal
 {
-    public EternalGoal(string name, string description, string points) : base(name, description, points)
+    public EternalGoal(string name, string description, int points) : base(name, description, points)
     {
         // Additional constructor logic if needed
     }
 
-    public new void RecordEvent()
+    public override void RecordEvent()
     {
-        // Logic to record an event related to the eternal goal
+        // Implement logic to record an event related to the eternal goal
+        // Example: Increment an internal counter or log the event
     }
 
-    public new bool IsComplete()
+    public override bool IsComplete()
     {
-        // Logic to check if the eternal goal is complete
-        return false; // Assuming it's always incomplete
+        // Eternal goals are never complete
+        return false;
     }
 
-    public new string GetStringRepresentation()
+    public override string GetStringRepresentation()
     {
-        // Logic to get string representation of the eternal goal
-        return base.GetStringRepresentation();
+        // Implement logic to get string representation of the eternal goal
+        return $"EternalGoal,{base.GetStringRepresentation()}";
     }
 }
